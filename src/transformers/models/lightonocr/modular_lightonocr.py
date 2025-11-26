@@ -631,7 +631,6 @@ class LightOnOCRModel(LightOnOCRPreTrainedModel):
             )
         return special_image_mask
 
-    @check_model_inputs()
     @auto_docstring
     def forward(
         self,
@@ -693,7 +692,6 @@ class LightOnOCRForConditionalGeneration(LightOnOCRPreTrainedModel, GenerationMi
     def get_decoder(self):
         return self.model.language_model
 
-    @check_model_inputs()
     @auto_docstring
     def forward(
         self,
